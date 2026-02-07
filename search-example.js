@@ -1,13 +1,13 @@
-import BuscadorImagenesSimulares from "./src/services/search-match.service.js";
+import BuscadorImagenesSimilares from "./src/services/search-match.service.js";
 
 async function main() {
-  const buscador = new BuscadorImagenesSimulares("./imagenes");
+  const buscador = new BuscadorImagenesSimilares("./imagenes");
 
   console.log("🔍 Buscando imagen más parecida...\n");
 
   // Buscar la imagen más parecida
   const resultado = await buscador.encontrarImagenMasParecida(
-    "./imagenes/original.jpg",
+    "./imagenes/test/original.jpg",
   );
 
   if (resultado.exito) {

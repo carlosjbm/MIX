@@ -1,8 +1,8 @@
 import ComparadorImagenes from "./src/comparator.js";
 
 async function main(
-  urlImage1 = "./imagenes/original.jpg",
-  urlImage2 = "./imagenes/original2.jpg",
+  urlImage1 = "./imagenes/tomy.jpg",
+  urlImage2 = "./imagenes/modificada2.jpg",
 ) {
   const comparador = new ComparadorImagenes({
     threshold: 0.1,

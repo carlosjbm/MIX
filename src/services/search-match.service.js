@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export class BuscadorImagenesSimulares {
+export class BuscadorImagenesSimilares {
   constructor(directorioImagenes = "./imagenes", opciones = {}) {
     this.directorioImagenes = directorioImagenes;
     this.comparador = new ComparadorImagenes(opciones);
@@ -58,6 +58,13 @@ export class BuscadorImagenesSimulares {
         );
 
         if (resultado.exito) {
+          // if (!resultado?.sonVisualmenteIguales) {
+          //   return {
+          //     exito: false,
+          //     error:
+          //       "No existe ninguna imagen visualmente igual a la imagen de búsqueda",
+          //   };
+          // }
           // Calcular similitud (100 - diferencia)
           const similitud = 100 - resultado.diferenciaPorcentaje;
 
@@ -146,4 +153,4 @@ export class BuscadorImagenesSimulares {
   }
 }
 
-export default BuscadorImagenesSimulares;
+export default BuscadorImagenesSimilares;
