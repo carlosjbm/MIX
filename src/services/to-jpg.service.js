@@ -1,3 +1,17 @@
+/**
+ Como utilizar este servicio:
+
+ import ConvertidorJPG from "./src/services/to-jpg.service.js";
+
+const convertidor = new ConvertidorJPG();
+
+// Convertir y guardar
+const resultado = await convertidor.convertirAJPG(
+  "./imagenes/original.png",
+  "./imagenes/convertida.jpg",
+  85 // calidad 0-100
+);
+ */
 import sharp from "sharp";
 import { promises as fs } from "fs";
 import path from "path";
