@@ -129,3 +129,7 @@ dist/
 build/
 *.min.js
 *.min.css
+# Ignore the differences image
+imagenes/diferencias.png
+#Ignore the test images
+imagenes/

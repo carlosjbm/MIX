@@ -1,6 +1,9 @@
 import ComparadorImagenes from "./src/comparator.js";
 
-async function main() {
+async function main(
+  urlImage1 = "./imagenes/original.jpg",
+  urlImage2 = "./imagenes/original2.jpg",
+) {
   const comparador = new ComparadorImagenes({
     threshold: 0.1,
     includeAA: false,
@@ -8,10 +11,7 @@ async function main() {
 
   console.log("🔄 Comparando imágenes...\n");
 
-  const resultado = await comparador.comparar(
-    "./imagenes/original.jpg",
-    "./imagenes/diferencias.png",
-  );
+  const resultado = await comparador.comparar(urlImage1, urlImage2);
 
   if (resultado.exito) {
     console.log("Resultado de comparación:");
@@ -32,7 +32,7 @@ async function main() {
       );
       if (guardado) {
         console.log(
-          "   📸 Imagen de diferencias guardada en ./imagenes/diferencias.png",
+          "📸 Imagen de diferencias guardada en ./imagenes/diferencias.png",
         );
       }
     }
